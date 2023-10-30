@@ -6,19 +6,19 @@ pipeline {
         stage('linux-armv6') {
           agent {label 'Tomcat server slave'}
           steps {
-            sh 'echo linux-armv6'
+            sh 'echo Tomcat server slave'
           }
         }
         stage('darwin-amd64') {
-          agent {label 'Tomcat server slave'}
+          agent {label 'slave-server-2'}
           steps {
-            sh 'echo darwin-amd64'
+            sh 'echo slave-server-2'
           }
         }
         stage('linux-amd64') {
-          agent {label 'Tomcat server slave'}
+          agent {label 'slave-server-3'}
           steps {
-            sh 'echo linux-amd64'
+            sh 'echo slave-server-3'
           }
         }
       }
